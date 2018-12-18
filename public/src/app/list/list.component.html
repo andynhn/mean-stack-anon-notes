@@ -1,0 +1,14 @@
+<div class="container">
+  <table id="notes">
+    <tbody>
+      <tr *ngFor="let note of notes">
+        <td>
+          <span>{{note.content}}</span>
+          <span>Created At: {{note.createdAt}}</span>
+          <span><button (click)="deleteNote(note._id)" class="buttonDelete">Delete</button></span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- {{notes | json}} -->
+</div>

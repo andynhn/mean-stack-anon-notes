@@ -1,0 +1,27 @@
+<!--By Andy Nguyen-->
+<div class="container">
+  <h1>{{ title }}</h1>
+  <form (submit)="createNote()">
+    <span>Note:</span><input type="text" name="note.content" [(ngModel)]="note.content" placeholder="" size="40px"><span></span>
+    <input type="submit" value="Add Note" class="buttonSubmit">
+  </form>
+
+
+    <!-- <app-add (getNotesFromList)="getNotesFromList()"></app-add> -->
+  <!-- <app-list [notes]="notes" (getNotesFromList)="getNotes()"></app-list> -->
+  <!-- can separate these into different components -->
+
+<hr>
+
+  <table id="notes">
+    <tbody>
+      <tr *ngFor="let note of notes">
+        <td>
+          <span>{{note.content}}</span>
+          <span>Created At: {{note.createdAt}}</span>
+          <span><button (click)="deleteNote(note._id)" class="buttonDelete">Delete</button></span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
