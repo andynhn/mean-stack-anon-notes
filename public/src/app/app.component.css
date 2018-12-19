@@ -35,6 +35,7 @@ button {
 .buttonDelete{
     background-color: red;
     color: white;
+    font-size: 14px;
 }
 .buttonSubmit{
     background-color: teal;
@@ -43,4 +44,7 @@ button {
 span {
     margin-left: 10px;
     margin-right: 10px;
+}
+.timestamp {
+    font-size: 12px;
 }

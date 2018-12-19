@@ -18,8 +18,7 @@
       <tr *ngFor="let note of notes">
         <td>
           <span>{{note.content}}</span>
-          <span>Created At: {{note.createdAt}}</span>
-          <span><button (click)="deleteNote(note._id)" class="buttonDelete">Delete</button></span>
+          <span class="timestamp">Created On: {{note.createdAt | date: "MMM dd, yyyy, h:mm:ss a"}} <button (click)="deleteNote(note._id)" class="buttonDelete">Delete</button></span>
         </td>
       </tr>
     </tbody>
